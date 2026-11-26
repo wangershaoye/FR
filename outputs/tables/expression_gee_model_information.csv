@@ -1,9 +1,0 @@
-analysis,outcome,expression_adjustment,formula,n_rows,n_participants,working_correlation,converged,scale
-GEE_exchangeable,trustworthiness,baseline,Trustworthiness ~ Artificiality + Attractiveness,50000,100,0.0981070005741747,True,0.6907535239314097
-GEE_exchangeable,trustworthiness,AU12,Trustworthiness ~ Artificiality + Attractiveness + AU12_z,50000,100,0.10025175567768356,True,0.6851017858665204
-GEE_exchangeable,trustworthiness,AU6,Trustworthiness ~ Artificiality + Attractiveness + AU6_z,50000,100,0.10008887754040542,True,0.683200521429271
-GEE_exchangeable,trustworthiness,happiness,Trustworthiness ~ Artificiality + Attractiveness + happiness_z,50000,100,0.10083669522763736,True,0.6860049890414308
-GEE_exchangeable,attractiveness,baseline,Attractiveness ~ Artificiality + Trustworthiness,50000,100,0.0884479459161052,True,0.771411156721702
-GEE_exchangeable,attractiveness,AU12,Attractiveness ~ Artificiality + Trustworthiness + AU12_z,50000,100,0.09005189615726354,True,0.7682199245861026
-GEE_exchangeable,attractiveness,AU6,Attractiveness ~ Artificiality + Trustworthiness + AU6_z,50000,100,0.08928109706853656,True,0.7704544183275165
-GEE_exchangeable,attractiveness,happiness,Attractiveness ~ Artificiality + Trustworthiness + happiness_z,50000,100,0.09167828674197323,True,0.7629106841793547

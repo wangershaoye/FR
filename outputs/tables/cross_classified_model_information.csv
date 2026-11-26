@@ -1,3 +1,0 @@
-outcome,converged,logLik,AIC,BIC,participant_intercept_variance,stimulus_intercept_variance,residual_variance,optimizer_attempts,warnings
-trustworthiness,True,-59315.19673194399,118642.39346388797,118695.31213359443,0.0676904123896254,0.3569229147722931,0.2660228241734822,"[('lbfgs', 'success', True)]",
-attractiveness,True,-62336.88994997839,124685.77989995677,124738.69856966323,0.0682421543358122,0.40934212698659317,0.29379277756670075,"[('lbfgs', 'success', True)]",
