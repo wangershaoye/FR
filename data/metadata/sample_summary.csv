@@ -1,0 +1,9 @@
+metric,value,unit
+n_participants,100.0,count
+n_female,27.0,count
+n_male,73.0,count
+age_mean_years,23.49,years
+age_sd_sample_years,5.549583658967471,years
+age_sd_population_years,5.521766021844822,years
+age_min_years,19.0,years
+age_max_years,50.0,years

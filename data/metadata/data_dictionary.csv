@@ -1,0 +1,21 @@
+variable,type,description,allowed_values_or_unit,missing_value_code
+participant_id,string,Newly assigned anonymous participant identifier,P001-P100,none
+stimulus_id,string,Anonymous AI-synthesized face identifier,S001-S500,none
+session,integer,Experimental session,1 or 2,none
+Artificiality,integer,Perceived artificiality rating,1-5 Likert,none
+Attractiveness,integer,Perceived attractiveness rating,1-5 Likert,none
+Trustworthiness,integer,Perceived facial trustworthiness rating,1-5 Likert,none
+response_time_sec,float,Total time used to complete the three ratings and advance the trial,seconds; >0,none
+generated_filename,string,Generated image filename linked to the stimulus manifest,PNG filename,none
+n_faces_detected,integer,Number of faces detected by Py-Feat before highest-confidence selection,integer >=1,none
+selected_face_index,integer,Zero-based index of the highest-confidence detected face,integer >=0,none
+face_confidence,float,RetinaFace confidence for the selected face,0-1,none
+AU6,float,Py-Feat XGBoost AU6 cheek-raiser score,model score 0-1,none
+AU12,float,Py-Feat XGBoost AU12 lip-corner-puller score,model score 0-1,none
+anger,float,Py-Feat ResMaskNet anger probability,0-1,none
+disgust,float,Py-Feat ResMaskNet disgust probability,0-1,none
+fear,float,Py-Feat ResMaskNet fear probability,0-1,none
+happiness,float,Py-Feat ResMaskNet happiness probability,0-1,none
+sadness,float,Py-Feat ResMaskNet sadness probability,0-1,none
+surprise,float,Py-Feat ResMaskNet surprise probability,0-1,none
+neutral,float,Py-Feat ResMaskNet neutral probability,0-1,none

@@ -1,0 +1,40 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0)
+======================================================================
+
+Scope
+-----
+The 500 AI-synthesized face images in stimuli/images/ -- and any figure in this
+repository that reproduces them (for example the example-face panels in
+notebooks/figures.ipynb) -- are licensed under CC BY-NC-SA 4.0.
+
+This does NOT cover the analysis code (see LICENSE, MIT) or the author-generated
+data and results (see LICENSE-DATA.txt, CC BY 4.0).
+
+Terms
+-----
+You are free to share and adapt these images for NON-COMMERCIAL purposes only,
+provided you give appropriate credit, indicate if changes were made, and
+distribute any derivatives under the same license (ShareAlike).
+
+  Full legal code:        https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+  Human-readable summary:  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Provenance and upstream terms
+-----------------------------
+These images were generated with StyleGAN2 (NVIDIA) using a model trained on the
+Flickr-Faces-HQ (FFHQ) dataset. FFHQ is distributed by NVIDIA under
+CC BY-NC-SA 4.0 and is intended for non-commercial research; the StyleGAN2
+FFHQ-trained model weights are likewise released under a non-commercial license.
+The non-commercial terms therefore flow through to these synthetic images, which
+is why they cannot be released under a permissive or commercial license.
+
+Credit:
+  - StyleGAN2: T. Karras et al., NVIDIA. https://github.com/NVlabs/stylegan2
+  - FFHQ dataset: NVIDIA. https://github.com/NVlabs/ffhq-dataset
+
+The images are synthetic and are not intended to depict identifiable real
+individuals.
+
+Before public release, confirm that the specific StyleGAN2 model/weights used
+permit redistribution of the selected generated images under these terms.
