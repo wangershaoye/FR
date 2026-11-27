@@ -32,7 +32,10 @@ EXPRESSION_FEATURES = [
     "surprise",
     "neutral",
 ]
-STANDARDIZED_FEATURES = ["AU12", "AU6", "happiness"]
+STANDARDIZED_FEATURES = [
+    "AU12", "AU6", "happiness",
+    "anger", "disgust", "fear", "sadness", "surprise",  # neutral = reference
+]
 OUTCOMES = {
     "trustworthiness": {
         "outcome": "Trustworthiness",
@@ -43,13 +46,16 @@ OUTCOMES = {
         "covariate": "Trustworthiness",
     },
 }
+
+EMOTION_SET = ["anger_z", "disgust_z", "fear_z", "happiness_z", "sadness_z", "surprise_z"]
 GEE_ADJUSTMENTS = {
     "baseline": None,
     "AU12": "AU12_z",
     "AU6": "AU6_z",
     "happiness": "happiness_z",
+    "emotions": EMOTION_SET,
 }
-LMM_ADJUSTMENTS = {"baseline": None, "AU12": "AU12_z"}
+LMM_ADJUSTMENTS = {"baseline": None, "AU12": "AU12_z", "emotions": EMOTION_SET}
 LMM_CACHE_DIR = ROOT / ".cache" / "expression_analysis"
 
 
@@ -179,7 +185,7 @@ def run_gee(data):
         for adjustment, feature_z in GEE_ADJUSTMENTS.items():
             terms = ["Artificiality", specification["covariate"]]
             if feature_z is not None:
-                terms.append(feature_z)
+                terms.extend([feature_z] if isinstance(feature_z, str) else list(feature_z))
             formula = f"{specification['outcome']} ~ " + " + ".join(terms)
             result = GEE.from_formula(
                 formula,
@@ -286,7 +292,7 @@ def run_lmm(data):
         for adjustment, feature_z in LMM_ADJUSTMENTS.items():
             terms = ["Artificiality", specification["covariate"]]
             if feature_z is not None:
-                terms.append(feature_z)
+                terms.extend([feature_z] if isinstance(feature_z, str) else list(feature_z))
             formula = f"{specification['outcome']} ~ " + " + ".join(terms)
             print(
                 f"Fitting expression-adjusted LMM: {outcome_label} | {adjustment}",
